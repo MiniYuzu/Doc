@@ -1,0 +1,165 @@
+html[data-theme='light'] {
+  --sidebar-category-c: var(--c-gray-100);
+  --sidebar-border-c: var(--c-gray-0);
+  --ifm-menu-color-background-active: var(--c-blue-0);
+  --ifm-menu-color: var(--c-indigo-80);
+}
+
+html[data-theme='dark'] {
+  --sidebar-category-c: var(--c-gray-0);
+  --sidebar-border-c: var(--c-gray-90);
+  --ifm-menu-color: var(--c-gray-20);
+}
+
+:root {
+  --doc-sidebar-width: 17.5rem;
+  --dropdown-icon-width: 1.5rem;
+  --dropdown-icon-height: 1.5rem;
+  --dropdown-icon-gap: 0.75rem;
+  --ifm-menu-link-padding-vertical: 0.5rem;
+  --ifm-menu-color-active: var(--ifm-link-color);
+  --sidebar-spacing-horizontal: 1.5rem;
+  --ifm-menu-color-background-hover: transparent;
+}
+
+#__docusaurus .theme-doc-sidebar-container {
+  background: var(--token-primary-bg-c);
+  position: sticky;
+  top: 0;
+  margin-block-start: 0;
+  will-change: initial;
+  height: 100vh;
+}
+
+#__docusaurus .theme-doc-sidebar-container [class^='sidebarViewport'] > a {
+  display: flex;
+  align-items: center;
+  height: var(--ifm-navbar-height);
+  padding-inline-start: var(--sidebar-spacing-horizontal);
+  padding-inline-end: var(--sidebar-spacing-horizontal);
+}
+
+#__docusaurus [class^='sidebar_'] {
+  max-height: calc(100vh - var(--ifm-navbar-height));
+  position: static;
+  overflow-y: auto;
+  padding-inline-start: var(--sidebar-spacing-horizontal);
+  padding-inline-end: var(--sidebar-spacing-horizontal);
+}
+
+#__docusaurus [class^='sidebar_'] > .menu {
+  overflow-x: initial;
+  padding: 0;
+}
+
+#__docusaurus [class^='sidebarLogo'] {
+  display: none !important;
+}
+
+#__docusaurus .theme-doc-sidebar-item-category-level-1 > .menu__list {
+  padding: 0;
+}
+
+#__docusaurus .menu__list {
+  display: block !important;
+  transition: height 0.35s cubic-bezier(0.36, 0.66, 0.04, 1) 25ms !important;
+  will-change: initial !important;
+  margin-top: 0;
+}
+
+#__docusaurus .menu__list .menu__list .menu__link--sublist {
+  margin-inline-start: calc(-1 * (var(--dropdown-icon-width) + var(--dropdown-icon-gap)));
+}
+
+#__docusaurus .menu__list .menu__list .menu__link--sublist::after {
+  background: var(--ifm-menu-link-sublist-icon) center / var(--dropdown-icon-width) var(--dropdown-icon-height);
+  background-repeat: no-repeat;
+  min-width: auto;
+  width: var(--dropdown-icon-width);
+  height: var(--dropdown-icon-height);
+  margin-inline-end: var(--dropdown-icon-gap);
+  margin-block-end: 0;
+  margin-inline-start: unset;
+  opacity: 0.8;
+  transition: transform 0.2s ease;
+}
+
+#__docusaurus .menu__list-item:not(:first-child) {
+  margin-block-start: 0;
+}
+
+#__docusaurus .menu__list-item .menu__list .menu__link {
+  padding-inline-start: calc(var(--dropdown-icon-width) + var(--dropdown-icon-gap));
+}
+
+#__docusaurus .menu__list-item-collapsible {
+  display: block;
+}
+
+#__docusaurus .theme-doc-sidebar-item-category-level-1:last-of-type {
+  margin-block-end: 1.5rem;
+}
+
+#__docusaurus .menu__link {
+  font-weight: 500;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.01em;
+  transition: opacity 0.2s ease-out;
+}
+
+#__docusaurus .menu__link:not(.menu__link--active:not(.menu__link--sublist)) {
+  background: initial;
+}
+
+#__docusaurus .menu__link:not(.menu__link--active):not(.menu__link--sublist):hover,
+#__docusaurus .menu__link:not(.menu__link--active):not(.menu__link--sublist):active,
+#__docusaurus .menu__link:not(.menu__link--active):not(.menu__link--sublist):focus {
+  opacity: 0.7;
+}
+
+#__docusaurus .menu__link--sublist {
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  margin-block-end: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+#__docusaurus .menu__link--sublist.menu__link--active::after {
+  transform: rotate(180deg);
+}
+
+#__docusaurus .menu__link--sublist:hover::after {
+  opacity: 1;
+}
+
+#__docusaurus .menu__list-item {
+  margin: 0.5rem 0;
+}
+
+#__docusaurus .menu__list .menu__list {
+  padding-left: 1rem;
+}
+
+#__docusaurus .menu__link--sublist::after {
+  background: var(--ifm-menu-link-sublist-icon) center / var(--dropdown-icon-width) var(--dropdown-icon-height);
+  background-repeat: no-repeat;
+  min-width: auto;
+  width: var(--dropdown-icon-width);
+  height: var(--dropdown-icon-height);
+  margin-inline-end: var(--dropdown-icon-gap);
+  margin-block-end: 0;
+  margin-inline-start: unset;
+  opacity: 0.8;
+  transition: transform 0.2s ease;
+}
+
+#__docusaurus .theme-doc-sidebar-item-category-level-1 > .menu__list-item-collapsible .menu__link {
+  color: var(--sidebar-category-c);
+  font-weight: 600;
+  line-height: 100%;
+} 

@@ -1,0 +1,21 @@
+/* overrides */
+#__docusaurus [class^='docMainContainer_'] {
+  max-width: initial;
+}
+
+#__docusaurus [class^='docMainContainer_'] > .container {
+  max-width: initial;
+}
+
+#__docusaurus [class^='docMainContainer_'] > .container > .row {
+  flex-wrap: nowrap;
+}
+
+#__docusaurus [class^='docRoot_'] > div {
+  flex-grow: 1;
+  min-width: 0;
+} 
+
+.content-navbar .navbar__brand {
+  display: none;
+}

@@ -19,3 +19,22 @@
 .content-navbar .navbar__brand {
   display: none;
 }
+
+.content-navbar .navbar__search {
+  flex: 1;
+  max-width: 300px;
+  margin-left: 1rem;
+}
+
+.content-navbar .navbar__search-input {
+  background-color: var(--ifm-navbar-search-input-background-color);
+  border: 1px solid var(--ifm-navbar-search-input-border-color);
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  width: 100%;
+}
+
+.content-navbar .navbar__search-input:focus {
+  outline: none;
+  border-color: var(--ifm-color-primary);
+}

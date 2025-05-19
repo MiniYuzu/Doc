@@ -13,7 +13,7 @@ export default function MainWrapper(props) {
   return (
     <div>
       <div className="content-navbar">
-        <Navbar />
+        <Navbar {...props} />
       </div>
       <Main {...props} />
     </div>

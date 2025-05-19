@@ -93,7 +93,8 @@ html[data-theme='dark'] {
 }
 
 #__docusaurus .menu__list-item-collapsible {
-  display: block;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 #__docusaurus .theme-doc-sidebar-item-category-level-1:last-of-type {

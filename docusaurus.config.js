@@ -44,6 +44,7 @@ const config = {
         docs: {
           sidebarPath: './sidebars.js',
         },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -79,13 +80,28 @@ const config = {
             position: 'left',
             label: 'TCCA',
           },
+          {
+            type: 'search',
+            position: 'left',
+          },
         ],
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      search: {
+        provider: 'local',
+        options: {
+          language: ['en', 'zh'],
+          indexPages: true,
+          highlightSearchTermsOnTargetPage: true,
+        },
+      },
     }),
+  themes: [
+    '@easyops-cn/docusaurus-search-local',
+  ],
 };
 
 export default config;
